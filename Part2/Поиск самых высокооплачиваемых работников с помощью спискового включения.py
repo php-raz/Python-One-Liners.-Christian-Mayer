@@ -4,9 +4,11 @@ employees = {'Alise': 100000,
              'Frank': 88123,
              'Eve': 93121}
 
-top_earners = []
-for k, v in employees.items():
-    if v >= 100000:
-        top_earners.append((k, v))
+# top_earners = []
+# for k, v in employees.items():
+#     if v >= 100000:
+#         top_earners.append((k, v))
+
+top_earners = [(k, v) for k, v in employees.items() if v >= 100000]
 
 print(top_earners)
